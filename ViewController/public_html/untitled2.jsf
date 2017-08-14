@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled2.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/templateDef2.jsf" id="pt1">
+                <f:facet name="top">
+                    <af:panelCollection id="pc1">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <af:table value="#{bindings.CountriesView1.collectionModel}" var="row"
+                                  rows="#{bindings.CountriesView1.rangeSize}"
+                                  emptyText="#{bindings.CountriesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0" fetchSize="#{bindings.CountriesView1.rangeSize}"
+                                  filterModel="#{bindings.CountriesView1Query.queryDescriptor}" filterVisible="true"
+                                  queryListener="#{bindings.CountriesView1Query.processQuery}" varStatus="vs" id="t1">
+                            <af:column sortProperty="#{bindings.CountriesView1.hints.CountryId.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.CountriesView1.hints.CountryId.label}"
+                                       id="c1">
+                                <af:outputText value="#{row.CountryId}"
+                                               shortDesc="#{bindings.CountriesView1.hints.CountryId.tooltip}" id="ot1"/>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.CountriesView1.hints.CountryName.name}"
+                                       filterable="true" sortable="true"
+                                       headerText="#{bindings.CountriesView1.hints.CountryName.label}" id="c2">
+                                <af:outputText value="#{row.CountryName}"
+                                               shortDesc="#{bindings.CountriesView1.hints.CountryName.tooltip}"
+                                               id="ot2"/>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.CountriesView1.hints.RegionId.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.CountriesView1.hints.RegionId.label}"
+                                       id="c3">
+                                <af:outputText value="#{row.RegionId}"
+                                               shortDesc="#{bindings.CountriesView1.hints.RegionId.tooltip}" id="ot3">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.CountriesView1.hints.RegionId.format}"/>
+                                </af:outputText>
+                            </af:column>
+                        </af:table>
+                        <f:facet name="statusbar"/>
+                    </af:panelCollection>
+                    <af:separator id="s1"/>
+                    <af:panelDashboard id="pd1" columns="2" rowHeight="300px">
+                        <af:panelBox text="PanelBox5" id="pb5">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="PanelBox6" id="pb6">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                    </af:panelDashboard>
+                </f:facet>
+                <f:facet name="bottom"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="templateDef1PageDef"
+                Package="org.dciss.app.view.pageDefs">
+  <parameters>
+    <parameter id="id1" readonly="false" value="${''}"/>
+    <parameter id="id2" readonly="false" value="${''}"/>
+    <parameter id="id3" readonly="false" value="${''}"/>
+    <parameter id="id4" readonly="false" value="${''}"/>
+    <parameter id="id5" readonly="false" value="${''}"/>
+    <parameter id="id6" readonly="false" value="${''}"/>
+    <parameter id="id7" readonly="false" value="${''}"/>
+    <parameter id="id8" readonly="false" value="${''}"/>
+    <parameter id="id9" readonly="false" value="${''}"/>
+    <parameter id="id10" readonly="false" value="${''}"/>
+  </parameters>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

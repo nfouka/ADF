@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkSfl03hf5xult5pjhhg6ft59weAssoc2Link"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2">
+  <ViewLinkDefEnd
+    Name="ComptesView"
+    Cardinality="1"
+    Source="true"
+    Owner="org.dciss.app.model.ComptesView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ComptesView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.ComptesView.Code"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="NationalityView"
+    Cardinality="-1"
+    Owner="org.dciss.app.model.NationalityView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="NationalityView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.NationalityView.StudentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

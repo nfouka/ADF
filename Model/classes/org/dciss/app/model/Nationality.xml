@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Nationality"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="nadirdb.nationality"
+  AliasName="Nationality"
+  BindingStyle="JDBC"
+  RowClass="org.dciss.app.model.NationalityImpl"
+  DefClass="org.dciss.app.model.NationalityDefImpl"
+  CollClass="org.dciss.app.model.NationalityCollImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="NationalityId"
+    IsNotNull="true"
+    ColumnName="nationality_id"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="nadirdb.nationality"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nationality"
+    Precision="255"
+    ColumnName="nationality"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="nadirdb.nationality">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="StudentId"
+    ColumnName="student_id"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="nadirdb.nationality">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Nationality1"
+    Association="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc"
+    AssociationEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc.Nationality1"
+    AssociationOtherEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc.StudentIdNationality"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="StudentIdNationality"
+    Association="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc"
+    AssociationEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc.StudentIdNationality"
+    AssociationOtherEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc.Nationality1"
+    Type="org.dciss.app.model.NationalityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Student"
+    Association="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc1"
+    AssociationEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc1.Student"
+    AssociationOtherEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc1.Nationality"
+    Type="org.dciss.app.model.StudentImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Comptes"
+    Association="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2"
+    AssociationEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2.Comptes"
+    AssociationOtherEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2.Nationality"
+    Type="org.dciss.app.model.ComptesImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.Nationality.NationalityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkSfl03hf5xult5pjhhg6ft59we">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_sfl03hf5xult5pjhhg6ft59we"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.Nationality.StudentId"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs"  definition="private"
+                    xmlns:f="http://java.sun.com/jsf/core">
+  <af:decorativeBox id="pt_db1" theme="dark">
+    <f:facet name="top">
+      <af:panelGridLayout id="pt_pgl1">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr1">
+          <af:gridCell marginStart="5px" width="50%" id="pt_gc1">
+            <af:image source="images/wildfly_logo.png" id="pt_i1"/>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="pt_gc2">
+            <af:outputText value="ORACLE ADF APPLICATION" id="pt_ot1" inlineStyle="font-size:larger;"/>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </f:facet>
+    <f:facet name="center">
+      <af:panelGridLayout id="pt_pgl2">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr2">
+          <af:gridCell marginStart="5px" width="dontCare" id="pt_gc3"/>
+          <af:gridCell marginStart="5px" width="60%" id="pt_gc4"/>
+          <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="pt_gc5"/>
+        </af:gridRow>
+      </af:panelGridLayout>
+      <af:panelGridLayout id="pt_pgl3">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr3">
+          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc6"/>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </f:facet>
+  </af:decorativeBox>
+</af:pageTemplateDef>

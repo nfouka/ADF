@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>templateDef4</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+    <af:decorativeBox id="pt_db1" theme="medium">
+        <f:facet name="top">
+            <af:panelGroupLayout id="pt_pgl1">
+                <af:image source="images/wildfly_logo.png" id="pt_i1"/>
+                <af:spacer width="200" height="10" id="pt_s1"/>
+                <af:outputText value="ADF ORACLE APPLICATION CRUD" id="pt_ot1"/>
+            </af:panelGroupLayout>
+        </f:facet>
+        <f:facet name="center">
+            <af:panelSplitter id="pt_ps1" orientation="vertical">
+                <f:facet name="first"/>
+                <f:facet name="second"/>
+            </af:panelSplitter>
+        </f:facet>
+    </af:decorativeBox>
+</af:pageTemplateDef>

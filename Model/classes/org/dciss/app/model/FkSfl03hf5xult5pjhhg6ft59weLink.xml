@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkSfl03hf5xult5pjhhg6ft59weLink"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc">
+  <ViewLinkDefEnd
+    Name="StudentIdNationalityView"
+    Cardinality="1"
+    Source="true"
+    Owner="org.dciss.app.model.NationalityView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="StudentIdNationalityView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.NationalityView.NationalityId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="NationalityView"
+    Cardinality="-1"
+    Owner="org.dciss.app.model.NationalityView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="NationalityView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.NationalityView.StudentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

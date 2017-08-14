@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="NationalityView"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Nationality"
+    Entity="org.dciss.app.model.Nationality"/>
+  <ViewAttribute
+    Name="NationalityId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="NationalityId"
+    EntityUsage="Nationality"
+    AliasName="nationality_id"/>
+  <ViewAttribute
+    Name="Nationality1"
+    PrecisionRule="true"
+    EntityAttrName="Nationality"
+    EntityUsage="Nationality"
+    AliasName="nationality"/>
+  <ViewAttribute
+    Name="StudentId"
+    PrecisionRule="true"
+    EntityAttrName="StudentId"
+    EntityUsage="Nationality"
+    AliasName="student_id"/>
+  <ViewLinkAccessor
+    Name="NationalityView"
+    ViewLink="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
+             SeparateXMLFiles="false" Package="org.dciss.app.view" ClientType="Generic">
+  <pageMap>
+    <page path="/index.jsf" usageId="org_dciss_app_view_indexPageDef"/>
+    <page path="/templateDef1.jsf" usageId="org_dciss_app_view_templateDef1PageDef"/>
+    <page path="/untitled2.jsf" usageId="org_dciss_app_view_untitled2PageDef"/>
+    <page path="/untitled10.jsf" usageId="org_dciss_app_view_untitled10PageDef"/>
+    <page path="/untitled11.jsf" usageId="org_dciss_app_view_untitled11PageDef"/>
+    <page path="/untitled12.jsf" usageId="org_dciss_app_view_untitled12PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="org_dciss_app_view_indexPageDef" path="org.dciss.app.view.pageDefs.indexPageDef"/>
+    <page id="org_dciss_app_view_templateDef1PageDef" path="org.dciss.app.view.pageDefs.templateDef1PageDef"/>
+    <page id="org_dciss_app_view_untitled2PageDef" path="org.dciss.app.view.pageDefs.untitled2PageDef"/>
+    <page id="org_dciss_app_view_untitled10PageDef" path="org.dciss.app.view.pageDefs.untitled10PageDef"/>
+    <page id="org_dciss_app_view_untitled11PageDef" path="org.dciss.app.view.pageDefs.untitled11PageDef"/>
+    <page id="org_dciss_app_view_untitled12PageDef" path="org.dciss.app.view.pageDefs.untitled12PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="org.dciss.app.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

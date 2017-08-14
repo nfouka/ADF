@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="ComptesView1"
+    ViewObjectName="org.dciss.app.model.ComptesView"/>
+  <ViewUsage
+    Name="NationalityView1"
+    ViewObjectName="org.dciss.app.model.NationalityView"/>
+  <ViewUsage
+    Name="NationalityView2"
+    ViewObjectName="org.dciss.app.model.NationalityView"/>
+  <ViewUsage
+    Name="StudentView1"
+    ViewObjectName="org.dciss.app.model.StudentView"/>
+  <ViewUsage
+    Name="NationalityView3"
+    ViewObjectName="org.dciss.app.model.NationalityView"/>
+  <ViewUsage
+    Name="ComptesView2"
+    ViewObjectName="org.dciss.app.model.ComptesView"/>
+  <ViewUsage
+    Name="NationalityView4"
+    ViewObjectName="org.dciss.app.model.NationalityView"/>
+  <ViewUsage
+    Name="CountriesView1"
+    ViewObjectName="org.dciss.app.model.CountriesView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="org.dciss.app.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="org.dciss.app.model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="FkSfl03hf5xult5pjhhg6ft59weLink"
+    ViewLinkObjectName="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weLink"
+    SrcViewUsageName="org.dciss.app.model.AppModule.NationalityView1"
+    DstViewUsageName="org.dciss.app.model.AppModule.NationalityView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkSfl03hf5xult5pjhhg6ft59weAssoc1Link"
+    ViewLinkObjectName="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc1Link"
+    SrcViewUsageName="org.dciss.app.model.AppModule.StudentView1"
+    DstViewUsageName="org.dciss.app.model.AppModule.NationalityView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkSfl03hf5xult5pjhhg6ft59weAssoc2Link"
+    ViewLinkObjectName="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2Link"
+    SrcViewUsageName="org.dciss.app.model.AppModule.ComptesView2"
+    DstViewUsageName="org.dciss.app.model.AppModule.NationalityView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink"
+    ViewLinkObjectName="org.dciss.app.model.EmpManagerFkLink"
+    SrcViewUsageName="org.dciss.app.model.AppModule.EmployeesView1"
+    DstViewUsageName="org.dciss.app.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+</AppModule>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Comptes"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="comptes"
+  AliasName="Comptes"
+  BindingStyle="JDBC"
+  RowClass="org.dciss.app.model.ComptesImpl"
+  DefClass="org.dciss.app.model.ComptesDefImpl"
+  CollClass="org.dciss.app.model.ComptesCollImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="Code"
+    IsNotNull="true"
+    ColumnName="code"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="comptes"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Datecreation"
+    ColumnName="dateCreation"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="comptes"/>
+  <Attribute
+    Name="Solde"
+    ColumnName="solde"
+    SQLType="DOUBLE"
+    Type="java.math.BigDecimal"
+    ColumnType="DOUBLE"
+    TableName="comptes">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Nationality"
+    Association="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2"
+    AssociationEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2.Nationality"
+    AssociationOtherEnd="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weAssoc2.Comptes"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.Comptes.Code"/>
+    </AttrArray>
+  </Key>
+</Entity>

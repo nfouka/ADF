@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled7.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/templateDef3.jsf" id="pt1">
+                <f:facet name="top"/>
+                <f:facet name="left"/>
+                <f:facet name="right"/>
+                <f:facet name="content">
+                    <af:calendar id="c1"/>
+                </f:facet>
+                <f:facet name="footer"/>
+            </af:pageTemplate>
+            s
+        </af:form>
+    </af:document>
+</f:view>

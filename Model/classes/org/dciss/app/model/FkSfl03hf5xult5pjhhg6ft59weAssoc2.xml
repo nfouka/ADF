@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkSfl03hf5xult5pjhhg6ft59weAssoc2"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Comptes"
+    Cardinality="1"
+    Source="true"
+    Owner="org.dciss.app.model.Comptes">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Comptes"/>
+      <Attr Name="_foreignKey" Value="org.dciss.app.model.Comptes.Primary1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.Comptes.Code"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Nationality"
+    Cardinality="-1"
+    Owner="org.dciss.app.model.Nationality">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Nationality"/>
+      <Attr Name="_foreignKey" Value="org.dciss.app.model.Nationality.FkSfl03hf5xult5pjhhg6ft59we"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.dciss.app.model.Nationality.StudentId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
