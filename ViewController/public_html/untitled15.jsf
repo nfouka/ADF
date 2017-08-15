@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled15.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/templateDef5.jsf" id="pt1">
+                <f:facet name="TOP">
+                    <af:carousel currentItemKey="#{bindings.Employees9999View11.treeModel.rootCurrencyRowKey}"
+                                 value="#{bindings.Employees9999View11.treeModel}" var="item" id="c2">
+                        <f:facet name="nodeStamp">
+                            <af:carouselItem id="ci2">
+                                <af:image source="#{item.Image}" id="i2">
+                                    <?audit suppress oracle.adf.faces.imgshortdesc?>
+                                </af:image>
+                            </af:carouselItem>
+                        </f:facet>
+                    </af:carousel>
+                </f:facet>
+                <f:facet name="BOTTOM">
+                    <af:panelDashboard id="pd1" columns="2">
+                        <af:panelBox text="PanelBox1" id="pb1">
+                            <f:facet name="toolbar"/>
+                           
+                        </af:panelBox>
+                        <af:panelBox text="PanelBox2" id="pb2">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                    </af:panelDashboard>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

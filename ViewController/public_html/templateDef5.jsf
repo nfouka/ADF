@@ -20,9 +20,8 @@
     <af:decorativeBox id="pt_db1">
         <f:facet name="top">
             <af:panelGroupLayout id="pt_pgl1">
-                <af:image source="#{resource['images:Oracle_logo.jpg']}" id="pt_i1"/>
+                <af:image source="/images/Oracle_logo.jpg" id="pt_i2"/>
                 <af:spacer width="200" height="10" id="pt_s1"/>
-                <af:outputText value="#{attrs.titre}" id="pt_ot1"/>
             </af:panelGroupLayout>
         </f:facet>
         <f:facet name="center">
