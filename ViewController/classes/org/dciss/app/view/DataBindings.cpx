@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
              SeparateXMLFiles="false" Package="org.dciss.app.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/index.jsf" usageId="org_dciss_app_view_indexPageDef"/>
     <page path="/templateDef1.jsf" usageId="org_dciss_app_view_templateDef1PageDef"/>
@@ -8,6 +12,10 @@
     <page path="/untitled10.jsf" usageId="org_dciss_app_view_untitled10PageDef"/>
     <page path="/untitled11.jsf" usageId="org_dciss_app_view_untitled11PageDef"/>
     <page path="/untitled12.jsf" usageId="org_dciss_app_view_untitled12PageDef"/>
+    <page path="/untitled13.jsf" usageId="org_dciss_app_view_untitled13PageDef"/>
+    <page path="/untitled15.jsf" usageId="org_dciss_app_view_untitled15PageDef"/>
+    <page path="/untitled1.jsf" usageId="org_dciss_app_view_untitled1PageDef"/>
+    <page path="/untitled17.jsf" usageId="org_dciss_app_view_untitled17PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="org_dciss_app_view_indexPageDef" path="org.dciss.app.view.pageDefs.indexPageDef"/>
@@ -16,6 +24,10 @@
     <page id="org_dciss_app_view_untitled10PageDef" path="org.dciss.app.view.pageDefs.untitled10PageDef"/>
     <page id="org_dciss_app_view_untitled11PageDef" path="org.dciss.app.view.pageDefs.untitled11PageDef"/>
     <page id="org_dciss_app_view_untitled12PageDef" path="org.dciss.app.view.pageDefs.untitled12PageDef"/>
+    <page id="org_dciss_app_view_untitled13PageDef" path="org.dciss.app.view.pageDefs.untitled13PageDef"/>
+    <page id="org_dciss_app_view_untitled15PageDef" path="org.dciss.app.view.pageDefs.untitled15PageDef"/>
+    <page id="org_dciss_app_view_untitled1PageDef" path="org.dciss.app.view.pageDefs.untitled1PageDef"/>
+    <page id="org_dciss_app_view_untitled17PageDef" path="org.dciss.app.view.pageDefs.untitled17PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="org.dciss.app.model"

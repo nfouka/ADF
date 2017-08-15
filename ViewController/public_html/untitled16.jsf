@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled16.jsf" id="d1">
+        <af:panelStretchLayout id="psl1">
+            <f:facet name="start">
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </f:facet>
+            <f:facet name="end">
+                <af:panelCollection id="pc2">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </f:facet>
+            <f:facet name="top">
+                <af:panelCollection id="pc3">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </f:facet>
+            <f:facet name="bottom">
+                <af:panelCollection id="pc4">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </f:facet>
+            <f:facet name="center">
+                <af:panelCollection id="pc5">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </f:facet>
+        </af:panelStretchLayout>
+    </af:document>
+</f:view>

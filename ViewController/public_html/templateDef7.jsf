@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>templateDef7</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>top</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>content</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>right</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>left</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>footer</afc:facet-name>
+            </afc:facet>
+            <afc:attribute>
+                <afc:attribute-name>title</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>title value</afc:default-value>
+            </afc:attribute>
+            <afc:attribute>
+                <afc:attribute-name>count</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>count</afc:default-value>
+            </afc:attribute>
+        </afc:component>
+    </af:xmlContent>
+    <af:decorativeBox id="pt_db1" theme="medium">
+        <f:facet name="top">
+            <af:panelGridLayout id="pt_pgl1">
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr1">
+                    <af:gridCell marginStart="5px" width="75%" id="pt_gc1">
+                        <af:image source="images/CharityBegins@Home2400px.png" id="pt_i1"
+                                  inlineStyle="height:40px; width:561px;"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="pt_gc2"/>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="center">
+            <af:panelGridLayout id="pt_pgl2">
+                <af:gridRow marginTop="1px" height="auto" marginBottom="1px" id="pt_gr2">
+                    <af:gridCell marginStart="5px" width="25%" id="pt_gc3">
+                        <af:facetRef facetName="left"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="50%" id="pt_gc4">
+                        <af:facetRef facetName="content"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="pt_gc5">
+                        <af:facetRef facetName="right"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+    </af:decorativeBox>
+</af:pageTemplateDef>

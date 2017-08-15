@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled1.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/templateDef5.jsf" id="pt1">
+                <f:facet name="TOP">
+                    <af:carousel currentItemKey="#{bindings.Employees9999View1.treeModel.rootCurrencyRowKey}"
+                                 value="#{bindings.Employees9999View1.treeModel}" var="item" id="c1">
+                        <f:facet name="nodeStamp">
+                            <af:carouselItem id="ci1">
+                                <af:image source="#{item.Image}" id="i1">
+                                    <?audit suppress oracle.adf.faces.imgshortdesc?>
+                                </af:image>
+                            </af:carouselItem>
+                        </f:facet>
+                    </af:carousel>
+                </f:facet>
+                <f:facet name="BOTTOM">
+                    <af:panelDashboard id="pd1" rowHeight="300px">
+                        <af:panelSplitter id="ps1">
+                            <f:facet name="first">
+                                <af:panelBox text="PanelBox1" id="pb1">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelBox text="PanelBox2" id="pb2">
+                                        <f:facet name="toolbar"/>
+                                        <af:table value="#{bindings.CountriesView11.collectionModel}" var="row"
+                                                  rows="#{bindings.CountriesView11.rangeSize}"
+                                                  emptyText="#{bindings.CountriesView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                  rowBandingInterval="0"
+                                                  fetchSize="#{bindings.CountriesView11.rangeSize}" id="t2">
+                                            <af:column headerText="#{bindings.CountriesView11.hints.CountryName.label}"
+                                                       id="c4">
+                                                <af:inputText value="#{row.bindings.CountryName.inputValue}"
+                                                              label="#{bindings.CountriesView11.hints.CountryName.label}"
+                                                              required="#{bindings.CountriesView11.hints.CountryName.mandatory}"
+                                                              columns="#{bindings.CountriesView11.hints.CountryName.displayWidth}"
+                                                              maximumLength="#{bindings.CountriesView11.hints.CountryName.precision}"
+                                                              shortDesc="#{bindings.CountriesView11.hints.CountryName.tooltip}"
+                                                              id="it1">
+                                                    <f:validator binding="#{row.bindings.CountryName.validator}"/>
+                                                </af:inputText>
+                                            </af:column>
+                                            <af:column headerText="#{bindings.CountriesView11.hints.RegionId.label}"
+                                                       id="c5">
+                                                <af:inputText value="#{row.bindings.RegionId.inputValue}"
+                                                              label="#{bindings.CountriesView11.hints.RegionId.label}"
+                                                              required="#{bindings.CountriesView11.hints.RegionId.mandatory}"
+                                                              columns="#{bindings.CountriesView11.hints.RegionId.displayWidth}"
+                                                              maximumLength="#{bindings.CountriesView11.hints.RegionId.precision}"
+                                                              shortDesc="#{bindings.CountriesView11.hints.RegionId.tooltip}"
+                                                              id="it2">
+                                                    <f:validator binding="#{row.bindings.RegionId.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CountriesView11.hints.RegionId.format}"/>
+                                                </af:inputText>
+                                            </af:column>
+                                        </af:table>
+                                    </af:panelBox>
+                                    <af:table value="#{bindings.CountriesView1.collectionModel}" var="row"
+                                              rows="#{bindings.CountriesView1.rangeSize}"
+                                              emptyText="#{bindings.CountriesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              rowBandingInterval="0" fetchSize="#{bindings.CountriesView1.rangeSize}"
+                                              filterModel="#{bindings.CountriesView1Query.queryDescriptor}"
+                                              filterVisible="true"
+                                              queryListener="#{bindings.CountriesView1Query.processQuery}"
+                                              varStatus="vs" id="t1">
+                                        <af:column sortProperty="#{bindings.CountriesView1.hints.CountryName.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.CountriesView1.hints.CountryName.label}"
+                                                   id="c2">
+                                            <af:outputText value="#{row.CountryName}"
+                                                           shortDesc="#{bindings.CountriesView1.hints.CountryName.tooltip}"
+                                                           id="ot1"/>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.CountriesView1.hints.RegionId.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.CountriesView1.hints.RegionId.label}" id="c3">
+                                            <af:outputText value="#{row.RegionId}"
+                                                           shortDesc="#{bindings.CountriesView1.hints.RegionId.tooltip}"
+                                                           id="ot2">
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.CountriesView1.hints.RegionId.format}"/>
+                                            </af:outputText>
+                                        </af:column>
+                                    </af:table>
+                                </af:panelBox>
+                            </f:facet>
+                            <f:facet name="second"/>
+                        </af:panelSplitter>
+                        <af:panelGroupLayout id="pgl1">
+                            <af:showDetail disclosed="true" id="sd1">
+                                <af:table value="#{bindings.Employees9999View11.collectionModel}" var="row"
+                                          rows="#{bindings.Employees9999View11.rangeSize}"
+                                          emptyText="#{bindings.Employees9999View11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0" fetchSize="#{bindings.Employees9999View11.rangeSize}"
+                                          id="t3">
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.EmployeeId.label}"
+                                               id="c6">
+                                        <af:inputText value="#{row.bindings.EmployeeId.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.EmployeeId.label}"
+                                                      required="#{bindings.Employees9999View11.hints.EmployeeId.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.EmployeeId.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.EmployeeId.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.EmployeeId.tooltip}"
+                                                      id="it3">
+                                            <f:validator binding="#{row.bindings.EmployeeId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Employees9999View11.hints.EmployeeId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.FirstName.label}"
+                                               id="c7">
+                                        <af:inputText value="#{row.bindings.FirstName.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.FirstName.label}"
+                                                      required="#{bindings.Employees9999View11.hints.FirstName.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.FirstName.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.FirstName.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.FirstName.tooltip}"
+                                                      id="it4">
+                                            <f:validator binding="#{row.bindings.FirstName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.LastName.label}"
+                                               id="c8">
+                                        <af:inputText value="#{row.bindings.LastName.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.LastName.label}"
+                                                      required="#{bindings.Employees9999View11.hints.LastName.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.LastName.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.LastName.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.LastName.tooltip}"
+                                                      id="it5">
+                                            <f:validator binding="#{row.bindings.LastName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.Email.label}" id="c9">
+                                        <af:inputText value="#{row.bindings.Email.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.Email.label}"
+                                                      required="#{bindings.Employees9999View11.hints.Email.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.Email.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.Email.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.Email.tooltip}"
+                                                      id="it6">
+                                            <f:validator binding="#{row.bindings.Email.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.PhoneNumber.label}"
+                                               id="c10">
+                                        <af:inputText value="#{row.bindings.PhoneNumber.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.PhoneNumber.label}"
+                                                      required="#{bindings.Employees9999View11.hints.PhoneNumber.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.PhoneNumber.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.PhoneNumber.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.PhoneNumber.tooltip}"
+                                                      id="it7">
+                                            <f:validator binding="#{row.bindings.PhoneNumber.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.HireDate.label}"
+                                               id="c11">
+                                        <af:inputDate value="#{row.bindings.HireDate.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.HireDate.label}"
+                                                      required="#{bindings.Employees9999View11.hints.HireDate.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.HireDate.displayWidth}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.HireDate.tooltip}"
+                                                      id="id1">
+                                            <f:validator binding="#{row.bindings.HireDate.validator}"/>
+                                            <af:convertDateTime pattern="#{bindings.Employees9999View11.hints.HireDate.format}"/>
+                                        </af:inputDate>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.JobId.label}" id="c12">
+                                        <af:inputText value="#{row.bindings.JobId.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.JobId.label}"
+                                                      required="#{bindings.Employees9999View11.hints.JobId.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.JobId.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.JobId.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.JobId.tooltip}"
+                                                      id="it8">
+                                            <f:validator binding="#{row.bindings.JobId.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.Salary.label}" id="c13">
+                                        <af:inputText value="#{row.bindings.Salary.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.Salary.label}"
+                                                      required="#{bindings.Employees9999View11.hints.Salary.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.Salary.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.Salary.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.Salary.tooltip}"
+                                                      id="it9">
+                                            <f:validator binding="#{row.bindings.Salary.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Employees9999View11.hints.Salary.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.CommissionPct.label}"
+                                               id="c14">
+                                        <af:inputText value="#{row.bindings.CommissionPct.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.CommissionPct.label}"
+                                                      required="#{bindings.Employees9999View11.hints.CommissionPct.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.CommissionPct.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.CommissionPct.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.CommissionPct.tooltip}"
+                                                      id="it10">
+                                            <f:validator binding="#{row.bindings.CommissionPct.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Employees9999View11.hints.CommissionPct.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.ManagerId.label}"
+                                               id="c15">
+                                        <af:inputText value="#{row.bindings.ManagerId.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.ManagerId.label}"
+                                                      required="#{bindings.Employees9999View11.hints.ManagerId.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.ManagerId.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.ManagerId.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.ManagerId.tooltip}"
+                                                      id="it11">
+                                            <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Employees9999View11.hints.ManagerId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.DepartmentId.label}"
+                                               id="c16">
+                                        <af:inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.DepartmentId.label}"
+                                                      required="#{bindings.Employees9999View11.hints.DepartmentId.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.DepartmentId.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.DepartmentId.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.DepartmentId.tooltip}"
+                                                      id="it12">
+                                            <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Employees9999View11.hints.DepartmentId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.Employees9999View11.hints.Image.label}" id="c17">
+                                        <af:inputText value="#{row.bindings.Image.inputValue}"
+                                                      label="#{bindings.Employees9999View11.hints.Image.label}"
+                                                      required="#{bindings.Employees9999View11.hints.Image.mandatory}"
+                                                      columns="#{bindings.Employees9999View11.hints.Image.displayWidth}"
+                                                      maximumLength="#{bindings.Employees9999View11.hints.Image.precision}"
+                                                      shortDesc="#{bindings.Employees9999View11.hints.Image.tooltip}"
+                                                      id="it13">
+                                            <f:validator binding="#{row.bindings.Image.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                </af:table>
+                            </af:showDetail>
+                        </af:panelGroupLayout>
+                    </af:panelDashboard>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

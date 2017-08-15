@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="untitled2.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Header -->
+                        <h:panelGroup id="pg1">
+                            <af:image source="images/Oracle_logo.jpg" id="i1" inlineStyle="width:184px; height:45px;"/>
+                            <af:spacer width="250" height="10" id="s1"/>
+                            <af:activeOutputText value="Employee Manager ERP With ADF By Nadir Fouka" id="aot1"
+                                                 inlineStyle="color:Navy; font-size:xx-large;"/>
+                        </h:panelGroup>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3">
+                        <!-- Content -->
+                        <af:panelSplitter id="ps1" orientation="vertical">
+                            <f:facet name="first">
+                                <af:panelCollection id="pc1">
+                                    <f:facet name="menus"/>
+                                    <f:facet name="toolbar"/>
+                                    <af:table value="#{bindings.Employees9999View1.collectionModel}" var="row"
+                                              rows="#{bindings.Employees9999View1.rangeSize}"
+                                              emptyText="#{bindings.Employees9999View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              rowBandingInterval="0"
+                                              selectedRowKeys="#{bindings.Employees9999View1.collectionModel.selectedRow}"
+                                              rowSelection="multiple"
+                                              fetchSize="#{bindings.Employees9999View1.rangeSize}"
+                                              filterModel="#{bindings.Employees9999View1Query.queryDescriptor}"
+                                              filterVisible="true"
+                                              queryListener="#{bindings.Employees9999View1Query.processQuery}"
+                                              varStatus="vs" id="t1" inlineStyle="height:298px;"
+                                              partialTriggers=":::b1 :::b2 :::b3 :::b4">
+                                        <?audit suppress oracle.adf.faces.compreqsummary?><?audit suppress oracle.adf.faces.tableneedsrowheader?>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.EmployeeId.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.EmployeeId.label}"
+                                                   id="c1">
+                                            <af:inputText value="#{row.bindings.EmployeeId.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.EmployeeId.label}"
+                                                          required="#{bindings.Employees9999View1.hints.EmployeeId.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.EmployeeId.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.EmployeeId.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.EmployeeId.tooltip}"
+                                                          id="it1">
+                                                <f:validator binding="#{row.bindings.EmployeeId.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.Employees9999View1.hints.EmployeeId.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.FirstName.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.FirstName.label}"
+                                                   id="c2">
+                                            <af:inputText value="#{row.bindings.FirstName.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.FirstName.label}"
+                                                          required="#{bindings.Employees9999View1.hints.FirstName.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.FirstName.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.FirstName.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.FirstName.tooltip}"
+                                                          id="it2">
+                                                <f:validator binding="#{row.bindings.FirstName.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.LastName.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.LastName.label}"
+                                                   id="c3">
+                                            <af:inputText value="#{row.bindings.LastName.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.LastName.label}"
+                                                          required="#{bindings.Employees9999View1.hints.LastName.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.LastName.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.LastName.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.LastName.tooltip}"
+                                                          id="it3">
+                                                <f:validator binding="#{row.bindings.LastName.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.Email.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.Email.label}"
+                                                   id="c4">
+                                            <af:inputText value="#{row.bindings.Email.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.Email.label}"
+                                                          required="#{bindings.Employees9999View1.hints.Email.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.Email.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.Email.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.Email.tooltip}"
+                                                          id="it4">
+                                                <f:validator binding="#{row.bindings.Email.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.PhoneNumber.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.PhoneNumber.label}"
+                                                   id="c5">
+                                            <af:inputText value="#{row.bindings.PhoneNumber.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.PhoneNumber.label}"
+                                                          required="#{bindings.Employees9999View1.hints.PhoneNumber.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.PhoneNumber.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.PhoneNumber.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.PhoneNumber.tooltip}"
+                                                          id="it5">
+                                                <f:validator binding="#{row.bindings.PhoneNumber.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.HireDate.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.HireDate.label}"
+                                                   id="c6">
+                                            <f:facet name="filter">
+                                                <af:inputDate value="#{bindings.Employees9999View1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.HireDate.value}"
+                                                              id="id1">
+                                                    <af:convertDateTime pattern="#{bindings.Employees9999View1.hints.HireDate.format}"/>
+                                                </af:inputDate>
+                                            </f:facet>
+                                            <af:inputDate value="#{row.bindings.HireDate.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.HireDate.label}"
+                                                          required="#{bindings.Employees9999View1.hints.HireDate.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.HireDate.displayWidth}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.HireDate.tooltip}"
+                                                          id="id2">
+                                                <f:validator binding="#{row.bindings.HireDate.validator}"/>
+                                                <af:convertDateTime pattern="#{bindings.Employees9999View1.hints.HireDate.format}"/>
+                                            </af:inputDate>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.JobId.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.JobId.label}"
+                                                   id="c7">
+                                            <af:inputText value="#{row.bindings.JobId.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.JobId.label}"
+                                                          required="#{bindings.Employees9999View1.hints.JobId.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.JobId.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.JobId.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.JobId.tooltip}"
+                                                          id="it6">
+                                                <f:validator binding="#{row.bindings.JobId.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.Salary.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.Salary.label}"
+                                                   id="c8">
+                                            <af:inputText value="#{row.bindings.Salary.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.Salary.label}"
+                                                          required="#{bindings.Employees9999View1.hints.Salary.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.Salary.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.Salary.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.Salary.tooltip}"
+                                                          id="it7">
+                                                <f:validator binding="#{row.bindings.Salary.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.Employees9999View1.hints.Salary.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.CommissionPct.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.CommissionPct.label}"
+                                                   id="c9">
+                                            <af:inputText value="#{row.bindings.CommissionPct.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.CommissionPct.label}"
+                                                          required="#{bindings.Employees9999View1.hints.CommissionPct.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.CommissionPct.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.CommissionPct.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.CommissionPct.tooltip}"
+                                                          id="it8">
+                                                <f:validator binding="#{row.bindings.CommissionPct.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.Employees9999View1.hints.CommissionPct.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.ManagerId.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.ManagerId.label}"
+                                                   id="c10">
+                                            <af:inputText value="#{row.bindings.ManagerId.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.ManagerId.label}"
+                                                          required="#{bindings.Employees9999View1.hints.ManagerId.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.ManagerId.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.ManagerId.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.ManagerId.tooltip}"
+                                                          id="it9">
+                                                <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.Employees9999View1.hints.ManagerId.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.DepartmentId.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.DepartmentId.label}"
+                                                   id="c11">
+                                            <af:inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.DepartmentId.label}"
+                                                          required="#{bindings.Employees9999View1.hints.DepartmentId.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.DepartmentId.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.DepartmentId.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.DepartmentId.tooltip}"
+                                                          id="it10">
+                                                <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.Employees9999View1.hints.DepartmentId.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.Employees9999View1.hints.Image.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.Employees9999View1.hints.Image.label}"
+                                                   id="c12">
+                                            <af:inputText value="#{row.bindings.Image.inputValue}"
+                                                          label="#{bindings.Employees9999View1.hints.Image.label}"
+                                                          required="#{bindings.Employees9999View1.hints.Image.mandatory}"
+                                                          columns="#{bindings.Employees9999View1.hints.Image.displayWidth}"
+                                                          maximumLength="#{bindings.Employees9999View1.hints.Image.precision}"
+                                                          shortDesc="#{bindings.Employees9999View1.hints.Image.tooltip}"
+                                                          id="it11">
+                                                <f:validator binding="#{row.bindings.Image.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                    </af:table>
+                                    <f:facet name="statusbar"/>
+                                </af:panelCollection>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelDashboard id="pd1" rowHeight="600px">
+                                    <af:panelBox text="EMPLOYEER" id="pb1">
+                                        <af:panelSplitter id="ps3" orientation="vertical">
+                                            <f:facet name="first">
+                                                <af:panelFormLayout id="pfl1">
+                                                    <af:inputText value="#{bindings.FirstName.inputValue}"
+                                                                  label="#{bindings.FirstName.hints.label}"
+                                                                  required="#{bindings.FirstName.hints.mandatory}"
+                                                                  columns="#{bindings.FirstName.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.FirstName.hints.precision}"
+                                                                  shortDesc="#{bindings.FirstName.hints.tooltip}"
+                                                                  id="it12">
+                                                        <f:validator binding="#{bindings.FirstName.validator}"/>
+                                                    </af:inputText>
+                                                    <af:inputText value="#{bindings.LastName.inputValue}"
+                                                                  label="#{bindings.LastName.hints.label}"
+                                                                  required="#{bindings.LastName.hints.mandatory}"
+                                                                  columns="#{bindings.LastName.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.LastName.hints.precision}"
+                                                                  shortDesc="#{bindings.LastName.hints.tooltip}"
+                                                                  id="it13">
+                                                        <f:validator binding="#{bindings.LastName.validator}"/>
+                                                    </af:inputText>
+                                                    <af:inputText value="#{bindings.Email.inputValue}"
+                                                                  label="#{bindings.Email.hints.label}"
+                                                                  required="#{bindings.Email.hints.mandatory}"
+                                                                  columns="#{bindings.Email.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Email.hints.precision}"
+                                                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it14">
+                                                        <f:validator binding="#{bindings.Email.validator}"/>
+                                                    </af:inputText>
+                                                    <af:inputText value="#{bindings.PhoneNumber.inputValue}"
+                                                                  label="#{bindings.PhoneNumber.hints.label}"
+                                                                  required="#{bindings.PhoneNumber.hints.mandatory}"
+                                                                  columns="#{bindings.PhoneNumber.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.PhoneNumber.hints.precision}"
+                                                                  shortDesc="#{bindings.PhoneNumber.hints.tooltip}"
+                                                                  id="it15">
+                                                        <f:validator binding="#{bindings.PhoneNumber.validator}"/>
+                                                    </af:inputText>
+                                                    <af:inputDate value="#{bindings.HireDate.inputValue}"
+                                                                  label="#{bindings.HireDate.hints.label}"
+                                                                  required="#{bindings.HireDate.hints.mandatory}"
+                                                                  columns="#{bindings.HireDate.hints.displayWidth}"
+                                                                  shortDesc="#{bindings.HireDate.hints.tooltip}"
+                                                                  id="id3">
+                                                        <f:validator binding="#{bindings.HireDate.validator}"/>
+                                                        <af:convertDateTime pattern="#{bindings.HireDate.format}"/>
+                                                    </af:inputDate>
+                                                    <af:inputText value="#{bindings.Salary.inputValue}"
+                                                                  label="#{bindings.Salary.hints.label}"
+                                                                  required="#{bindings.Salary.hints.mandatory}"
+                                                                  columns="#{bindings.Salary.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Salary.hints.precision}"
+                                                                  shortDesc="#{bindings.Salary.hints.tooltip}"
+                                                                  id="it16">
+                                                        <f:validator binding="#{bindings.Salary.validator}"/>
+                                                        <af:convertNumber groupingUsed="false"
+                                                                          pattern="#{bindings.Salary.format}"/>
+                                                    </af:inputText>
+                                                </af:panelFormLayout>
+                                            </f:facet>
+                                            <f:facet name="second">
+                                                <af:panelSplitter id="ps4">
+                                                    <f:facet name="first">
+                                                        <dvt:funnelChart orientation="horizontal" id="funnelChart1"
+                                                                         var="row"
+                                                                         value="#{bindings.Employees9999View17.collectionModel}">
+                                                            <dvt:funnelDataItem id="di1" targetValue="#{row.Salary}"
+                                                                                label="#{row.Image}"
+                                                                                value="#{row.CommissionPct}"/>
+                                                        </dvt:funnelChart>
+                                                    </f:facet>
+                                                    <f:facet name="second">
+                                                        <dvt:pieChart id="pieChart1" var="row"
+                                                                      value="#{bindings.Employees9999View18.collectionModel}">
+                                                            <dvt:chartLegend id="cl1"/>
+                                                            <dvt:pieDataItem id="di2" label="#{row.DepartmentId}"
+                                                                             value="#{row.CommissionPct}"/>
+                                                        </dvt:pieChart>
+                                                    </f:facet>
+                                                </af:panelSplitter>
+                                            </f:facet>
+                                        </af:panelSplitter>
+                                    </af:panelBox>
+                                    <af:panelBox text="MORE INFO" id="pb2">
+                                        <f:facet name="toolbar"/>
+                                        <af:panelSplitter id="ps2" orientation="vertical">
+                                            <f:facet name="first">
+                                                <dvt:sparkChart id="sparkchart1" subType="bar"
+                                                                axisScaledFromBaseline="off">
+                                                    <?audit suppress oracle.adf.dvt.acc-compreqshortdesc?>
+                                                    <af:iterator value="#{bindings.Employees9999View12.collectionModel}"
+                                                                 var="row" id="i2">
+                                                        <dvt:sparkItem value="#{row.Salary}" id="si1">
+                                                            <?audit suppress oracle.ide.xml.validation-error?>
+                                                        </dvt:sparkItem>
+                                                    </af:iterator>
+                                                </dvt:sparkChart>
+                                            </f:facet>
+                                            <f:facet name="second">
+                                                <af:panelSplitter id="ps5">
+                                                    <f:facet name="first">
+                                                        <dvt:lineChart splitDualY="on" id="lineChart1" var="row"
+                                                                       value="#{bindings.Employees9999View16.collectionModel}">
+                                                            <dvt:chartLegend id="cl2"/>
+                                                            <dvt:chartY2Axis id="cya1"/>
+                                                            <f:facet name="dataStamp">
+                                                                <af:group id="g1">
+                                                                    <dvt:chartDataItem id="di3"
+                                                                                       series="#{bindings.Employees9999View16.hints.Salary.label}"
+                                                                                       value="#{row.Salary}"
+                                                                                       group="#{row.EmployeeId}"/>
+                                                                    <dvt:chartDataItem id="di4"
+                                                                                       series="#{bindings.Employees9999View16.hints.CommissionPct.label}"
+                                                                                       value="#{row.CommissionPct}"
+                                                                                       group="#{row.EmployeeId}"/>
+                                                                    <dvt:chartDataItem id="di5"
+                                                                                       series="#{bindings.Employees9999View16.hints.DepartmentId.label}"
+                                                                                       value="#{row.DepartmentId}"
+                                                                                       group="#{row.EmployeeId}"/>
+                                                                    <dvt:chartDataItem id="di6"
+                                                                                       series="#{bindings.Employees9999View16.hints.ManagerId.label}"
+                                                                                       value="#{row.ManagerId}"
+                                                                                       group="#{row.EmployeeId}"/>
+                                                                </af:group>
+                                                            </f:facet>
+                                                        </dvt:lineChart>
+                                                    </f:facet>
+                                                    <f:facet name="second">
+                                                        <dvt:barChart coordinateSystem="polar" id="barChart1" var="row"
+                                                                      value="#{bindings.Employees9999View19.collectionModel}">
+                                                            <f:facet name="dataStamp">
+                                                                <af:group id="g2">
+                                                                    <dvt:chartDataItem id="di7"
+                                                                                       series="#{bindings.Employees9999View19.hints.EmployeeId.label}"
+                                                                                       value="#{row.EmployeeId}"
+                                                                                       group="#{row.HireDate} #{row.Salary}"/>
+                                                                    <dvt:chartDataItem id="di8"
+                                                                                       series="#{bindings.Employees9999View19.hints.CommissionPct.label}"
+                                                                                       value="#{row.CommissionPct}"
+                                                                                       group="#{row.HireDate} #{row.Salary}"/>
+                                                                    <dvt:chartDataItem id="di9"
+                                                                                       series="#{bindings.Employees9999View19.hints.DepartmentId.label}"
+                                                                                       value="#{row.DepartmentId}"
+                                                                                       group="#{row.HireDate} #{row.Salary}"/>
+                                                                    <dvt:chartDataItem id="di10"
+                                                                                       series="#{bindings.Employees9999View19.hints.ManagerId.label}"
+                                                                                       value="#{row.ManagerId}"
+                                                                                       group="#{row.HireDate} #{row.Salary}"/>
+                                                                </af:group>
+                                                            </f:facet>
+                                                        </dvt:barChart>
+                                                    </f:facet>
+                                                </af:panelSplitter>
+                                            </f:facet>
+                                        </af:panelSplitter>
+                                    </af:panelBox>
+                                    <af:panelBox text="CAROSEL" id="pb3">
+                                        <af:carousel currentItemKey="#{bindings.Employees9999View14.treeModel.rootCurrencyRowKey}"
+                                                     value="#{bindings.Employees9999View14.treeModel}" var="item"
+                                                     id="c13">
+                                            <f:facet name="nodeStamp">
+                                                <af:carouselItem id="ci1">
+                                                    <h:graphicImage id="gi1"
+                                                                    value="#{item.Image}"/>
+                                                </af:carouselItem>
+                                            </f:facet>
+                                        </af:carousel>
+                                    </af:panelBox>
+                                </af:panelDashboard>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr3">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Footer -->
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

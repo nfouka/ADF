@@ -150,6 +150,20 @@
     AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc.Employees"
     Type="org.dciss.app.model.EmployeesImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees9999"
+    Association="org.dciss.app.model.EmpManagerFkAssoc1"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees9999"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees"
+    Type="org.dciss.app.model.Employees9999Impl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees99991"
+    Association="org.dciss.app.model.EmpManagerFkAssoc3"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees99991"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>
