@@ -37,6 +37,24 @@
   <ViewUsage
     Name="EmployeesView2"
     ViewObjectName="org.dciss.app.model.EmployeesView"/>
+  <ViewUsage
+    Name="Employees9999View1"
+    ViewObjectName="org.dciss.app.model.Employees9999View"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="org.dciss.app.model.EmployeesView"/>
+  <ViewUsage
+    Name="Employees9999View2"
+    ViewObjectName="org.dciss.app.model.Employees9999View"/>
+  <ViewUsage
+    Name="Employees9999View3"
+    ViewObjectName="org.dciss.app.model.Employees9999View"/>
+  <ViewUsage
+    Name="EmployeesView4"
+    ViewObjectName="org.dciss.app.model.EmployeesView"/>
+  <ViewUsage
+    Name="Employees9999View4"
+    ViewObjectName="org.dciss.app.model.Employees9999View"/>
   <ViewLinkUsage
     Name="FkSfl03hf5xult5pjhhg6ft59weLink"
     ViewLinkObjectName="org.dciss.app.model.FkSfl03hf5xult5pjhhg6ft59weLink"
@@ -60,5 +78,23 @@
     ViewLinkObjectName="org.dciss.app.model.EmpManagerFkLink"
     SrcViewUsageName="org.dciss.app.model.AppModule.EmployeesView1"
     DstViewUsageName="org.dciss.app.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkAssoc1Link"
+    ViewLinkObjectName="org.dciss.app.model.EmpManagerFkAssoc1Link"
+    SrcViewUsageName="org.dciss.app.model.AppModule.Employees9999View1"
+    DstViewUsageName="org.dciss.app.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkAssoc2Link"
+    ViewLinkObjectName="org.dciss.app.model.EmpManagerFkAssoc2Link"
+    SrcViewUsageName="org.dciss.app.model.AppModule.Employees9999View2"
+    DstViewUsageName="org.dciss.app.model.AppModule.Employees9999View3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkAssoc3Link"
+    ViewLinkObjectName="org.dciss.app.model.EmpManagerFkAssoc3Link"
+    SrcViewUsageName="org.dciss.app.model.AppModule.EmployeesView4"
+    DstViewUsageName="org.dciss.app.model.AppModule.Employees9999View4"
     Reversed="false"/>
 </AppModule>

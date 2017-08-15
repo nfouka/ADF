@@ -8,6 +8,9 @@
     <page path="/untitled10.jsf" usageId="org_dciss_app_view_untitled10PageDef"/>
     <page path="/untitled11.jsf" usageId="org_dciss_app_view_untitled11PageDef"/>
     <page path="/untitled12.jsf" usageId="org_dciss_app_view_untitled12PageDef"/>
+    <page path="/untitled13.jsf" usageId="org_dciss_app_view_untitled13PageDef"/>
+    <page path="/untitled15.jsf" usageId="org_dciss_app_view_untitled15PageDef"/>
+    <page path="/untitled1.jsf" usageId="org_dciss_app_view_untitled1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="org_dciss_app_view_indexPageDef" path="org.dciss.app.view.pageDefs.indexPageDef"/>
@@ -16,6 +19,9 @@
     <page id="org_dciss_app_view_untitled10PageDef" path="org.dciss.app.view.pageDefs.untitled10PageDef"/>
     <page id="org_dciss_app_view_untitled11PageDef" path="org.dciss.app.view.pageDefs.untitled11PageDef"/>
     <page id="org_dciss_app_view_untitled12PageDef" path="org.dciss.app.view.pageDefs.untitled12PageDef"/>
+    <page id="org_dciss_app_view_untitled13PageDef" path="org.dciss.app.view.pageDefs.untitled13PageDef"/>
+    <page id="org_dciss_app_view_untitled15PageDef" path="org.dciss.app.view.pageDefs.untitled15PageDef"/>
+    <page id="org_dciss_app_view_untitled1PageDef" path="org.dciss.app.view.pageDefs.untitled1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="org.dciss.app.model"

@@ -5,20 +5,20 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="EmployeesView1" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeesView1Iterator"/>
-    <searchRegion Binds="EmployeesView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmployeesView1Query"/>
-    <iterator Binds="EmployeesView2" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeesView2Iterator"/>
+    <iterator Binds="Employees9999View1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Employees9999View1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="EmployeesView1Iterator" id="EmployeesView1">
-      <nodeDefinition DefName="org.dciss.app.model.EmployeesView" Name="EmployeesView10">
+    <tree IterBinding="EmployeesView1Iterator" id="EmployeesView11">
+      <nodeDefinition DefName="org.dciss.app.model.EmployeesView" Name="EmployeesView110">
         <AttrNames>
-          <Item Value="JobId"/>
+          <Item Value="EmployeeId"/>
           <Item Value="FirstName"/>
           <Item Value="LastName"/>
           <Item Value="Email"/>
           <Item Value="PhoneNumber"/>
           <Item Value="HireDate"/>
+          <Item Value="JobId"/>
           <Item Value="Salary"/>
           <Item Value="CommissionPct"/>
           <Item Value="ManagerId"/>
@@ -26,48 +26,31 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="EmployeeId">
+    <tree IterBinding="Employees9999View1Iterator" id="Employees9999View1">
+      <nodeDefinition DefName="org.dciss.app.model.Employees9999View" Name="Employees9999View10">
+        <AttrNames>
+          <Item Value="Image"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="Employees9999View1Iterator" id="Image">
       <AttrNames>
-        <Item Value="EmployeeId"/>
+        <Item Value="Image"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="FirstName">
-      <AttrNames>
-        <Item Value="FirstName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="LastName">
-      <AttrNames>
-        <Item Value="LastName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="Email">
-      <AttrNames>
-        <Item Value="Email"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="PhoneNumber">
-      <AttrNames>
-        <Item Value="PhoneNumber"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="HireDate">
+    <attributeValues IterBinding="Employees9999View1Iterator" id="HireDate">
       <AttrNames>
         <Item Value="HireDate"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="EmployeesView2Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="EmployeesView2Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="EmployeesView2Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="EmployeesView2Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="JobId">
-      <AttrNames>
-        <Item Value="JobId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="EmployeesView2Iterator" id="Salary">
-      <AttrNames>
-        <Item Value="Salary"/>
       </AttrNames>
     </attributeValues>
   </bindings>

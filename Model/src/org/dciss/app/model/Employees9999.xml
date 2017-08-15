@@ -3,16 +3,16 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Employees"
+  Name="Employees9999"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
-  AliasName="Employees"
+  AliasName="Employees9999"
   BindingStyle="JDBC"
-  RowClass="org.dciss.app.model.EmployeesImpl"
-  DefClass="org.dciss.app.model.EmployeesDefImpl"
-  CollClass="org.dciss.app.model.EmployeesCollImpl">
+  RowClass="org.dciss.app.model.Employees9999Impl"
+  DefClass="org.dciss.app.model.Employees9999DefImpl"
+  CollClass="org.dciss.app.model.Employees9999CollImpl">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -136,34 +136,46 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="EMPLOYEES"/>
+  <Attribute
+    Name="Image"
+    Precision="20"
+    ColumnName="IMAGE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Employees"
-    Association="org.dciss.app.model.EmpManagerFkAssoc"
-    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc.Employees"
-    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc.ManagerIdEmployees"
+    Association="org.dciss.app.model.EmpManagerFkAssoc1"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees9999"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="ManagerIdEmployees"
-    Association="org.dciss.app.model.EmpManagerFkAssoc"
-    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc.ManagerIdEmployees"
-    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc.Employees"
-    Type="org.dciss.app.model.EmployeesImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Employees9999"
-    Association="org.dciss.app.model.EmpManagerFkAssoc1"
-    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees9999"
-    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc1.Employees"
+    Name="ManagerIdEmployees9999"
+    Association="org.dciss.app.model.EmpManagerFkAssoc2"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc2.ManagerIdEmployees9999"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc2.Employees9999"
     Type="org.dciss.app.model.Employees9999Impl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Employees99991"
-    Association="org.dciss.app.model.EmpManagerFkAssoc3"
-    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees99991"
-    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees1"
+    Name="Employees9999"
+    Association="org.dciss.app.model.EmpManagerFkAssoc2"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc2.Employees9999"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc2.ManagerIdEmployees9999"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Employees1"
+    Association="org.dciss.app.model.EmpManagerFkAssoc3"
+    AssociationEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees1"
+    AssociationOtherEnd="org.dciss.app.model.EmpManagerFkAssoc3.Employees99991"
+    Type="org.dciss.app.model.EmployeesImpl"
+    IsUpdateable="true"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>
@@ -171,7 +183,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMAIL_UK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="org.dciss.app.model.Employees.Email"/>
+      <Item Value="org.dciss.app.model.Employees9999.Email"/>
     </AttrArray>
   </Key>
   <Key
@@ -181,7 +193,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMP_ID_PK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="org.dciss.app.model.Employees.EmployeeId"/>
+      <Item Value="org.dciss.app.model.Employees9999.EmployeeId"/>
     </AttrArray>
   </Key>
   <Key
@@ -192,7 +204,7 @@
       <Attr Name="_DBObjectName" Value="EMP_DEPT_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="org.dciss.app.model.Employees.DepartmentId"/>
+      <Item Value="org.dciss.app.model.Employees9999.DepartmentId"/>
     </AttrArray>
   </Key>
   <Key
@@ -203,7 +215,7 @@
       <Attr Name="_DBObjectName" Value="EMP_JOB_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="org.dciss.app.model.Employees.JobId"/>
+      <Item Value="org.dciss.app.model.Employees9999.JobId"/>
     </AttrArray>
   </Key>
   <Key
@@ -214,7 +226,7 @@
       <Attr Name="_DBObjectName" Value="EMP_MANAGER_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="org.dciss.app.model.Employees.ManagerId"/>
+      <Item Value="org.dciss.app.model.Employees9999.ManagerId"/>
     </AttrArray>
   </Key>
 </Entity>

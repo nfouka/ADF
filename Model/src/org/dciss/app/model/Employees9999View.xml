@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="EmployeesView"
+  Name="Employees9999View"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,27 +14,27 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="Employees"
-    Entity="org.dciss.app.model.Employees"/>
+    Name="Employees9999"
+    Entity="org.dciss.app.model.Employees9999"/>
   <ViewAttribute
     Name="EmployeeId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="EmployeeId"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="EMPLOYEE_ID"/>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
     EntityAttrName="FirstName"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="FIRST_NAME"/>
   <ViewAttribute
     Name="LastName"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="LastName"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="LAST_NAME"/>
   <ViewAttribute
     Name="Email"
@@ -42,60 +42,66 @@
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Email"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="EMAIL"/>
   <ViewAttribute
     Name="PhoneNumber"
     PrecisionRule="true"
     EntityAttrName="PhoneNumber"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="PHONE_NUMBER"/>
   <ViewAttribute
     Name="HireDate"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="HireDate"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="HIRE_DATE"/>
   <ViewAttribute
     Name="JobId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="JobId"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="JOB_ID"/>
   <ViewAttribute
     Name="Salary"
     PrecisionRule="true"
     EntityAttrName="Salary"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="SALARY"/>
   <ViewAttribute
     Name="CommissionPct"
     PrecisionRule="true"
     EntityAttrName="CommissionPct"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="COMMISSION_PCT"/>
   <ViewAttribute
     Name="ManagerId"
     PrecisionRule="true"
     EntityAttrName="ManagerId"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="MANAGER_ID"/>
   <ViewAttribute
     Name="DepartmentId"
     PrecisionRule="true"
     EntityAttrName="DepartmentId"
-    EntityUsage="Employees"
+    EntityUsage="Employees9999"
     AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="Image"
+    PrecisionRule="true"
+    EntityAttrName="Image"
+    EntityUsage="Employees9999"
+    AliasName="IMAGE"/>
   <ViewLinkAccessor
     Name="EmployeesView"
-    ViewLink="org.dciss.app.model.EmpManagerFkLink"
+    ViewLink="org.dciss.app.model.EmpManagerFkAssoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="Employees9999View"
-    ViewLink="org.dciss.app.model.EmpManagerFkAssoc3Link"
+    ViewLink="org.dciss.app.model.EmpManagerFkAssoc2Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>
